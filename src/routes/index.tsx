@@ -80,7 +80,7 @@ function HomePage() {
             ))}
           </div>
           <div className="mt-10 flex flex-wrap gap-4">
-            <a href="https://wa.me/12366134007" className="px-6 py-3 rounded-full bg-green-500 hover:bg-green-600 text-white font-semibold">
+            <a href="https://wa.me/13312782900" className="px-6 py-3 rounded-full bg-green-500 hover:bg-green-600 text-white font-semibold">
               Get Started
             </a>
             <Link to="/portfolio" className="px-6 py-3 rounded-full bg-white text-slate-800 hover:bg-slate-100 font-semibold">
@@ -210,7 +210,7 @@ function HomePage() {
                 <div className="p-6">
                   <h3 className="font-bold text-lg text-slate-800 mb-2">{o.title}</h3>
                   <p className="text-sm text-slate-600 leading-relaxed mb-3">{o.desc}</p>
-                  <a href="https://wa.me/12366134007" className="text-blue-600 font-semibold text-sm hover:underline">READ MORE</a>
+                  <a href="https://wa.me/13312782900" className="text-blue-600 font-semibold text-sm hover:underline">READ MORE</a>
                 </div>
               </div>
             ))}
@@ -224,7 +224,7 @@ function HomePage() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Grow Your Business?</h2>
           <p className="text-slate-300 mb-8">Contact us today for a free consultation and let's discuss how we can help you achieve your digital marketing goals.</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="https://wa.me/12366134007" className="px-6 py-3 rounded-full bg-green-500 hover:bg-green-600 font-semibold">Get Started</a>
+            <a href="https://wa.me/13312782900" className="px-6 py-3 rounded-full bg-green-500 hover:bg-green-600 font-semibold">Get Started</a>
             <Link to="/contact" className="px-6 py-3 rounded-full bg-white text-slate-800 hover:bg-slate-100 font-semibold">Contact Us</Link>
           </div>
         </div>

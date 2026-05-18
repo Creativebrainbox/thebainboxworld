@@ -16,12 +16,12 @@ function TopBar() {
   return (
     <div className="bg-slate-900 text-slate-200 text-xs sm:text-sm">
       <div className="max-w-7xl mx-auto px-4 py-2.5 flex flex-wrap justify-between items-center gap-2">
-        <a href="https://wa.me/12366134007" className="flex items-center gap-2 hover:text-white">
-          <Phone className="w-4 h-4" /> WhatsApp: +1 (236) 613-4007
+        <a href="https://wa.me/13312782900" className="flex items-center gap-2 hover:text-white">
+          <Phone className="w-4 h-4" /> WhatsApp: +1 (331) 278-2900
         </a>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
-          <a href="mailto:info@brainboxworld.infy.uk" className="flex items-center gap-2 hover:text-white">
-            <Mail className="w-4 h-4" /> info@brainboxworld.infy.uk
+          <a href="mailto:info@brainboxworld.dedyn.io" className="flex items-center gap-2 hover:text-white">
+            <Mail className="w-4 h-4" /> info@brainboxworld.dedyn.io
           </a>
           <span className="flex items-center gap-2">
             <Clock className="w-4 h-4" /> Mon-Sat : 9 AM to 6 PM
@@ -119,8 +119,8 @@ function Footer() {
         <div>
           <h4 className="text-white font-semibold mb-4">Contact</h4>
           <ul className="space-y-2 text-sm">
-            <li className="flex items-center gap-2"><Phone className="w-4 h-4" /> +1 (236) 613-4007</li>
-            <li className="flex items-center gap-2"><Mail className="w-4 h-4" /> info@brainboxworld.infy.uk</li>
+            <li className="flex items-center gap-2"><Phone className="w-4 h-4" /> +1 (331) 278-2900</li>
+            <li className="flex items-center gap-2"><Mail className="w-4 h-4" /> info@brainboxworld.dedyn.io</li>
             <li className="flex items-center gap-2"><Clock className="w-4 h-4" /> Mon-Sat : 9 AM to 6 PM</li>
           </ul>
         </div>
@@ -135,7 +135,7 @@ function Footer() {
 export function WhatsAppFloat() {
   return (
     <a
-      href="https://wa.me/12366134007"
+      href="https://wa.me/13312782900"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white flex items-center justify-center shadow-lg z-50"

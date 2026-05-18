@@ -46,7 +46,7 @@ function ContactPage() {
             </p>
             <div className="space-y-5">
               <InfoRow icon={Mail} title="Email">
-                <a href="mailto:info@brainboxworld.infy.uk" className="hover:text-blue-600">info@brainboxworld.infy.uk</a>
+                <a href="mailto:info@brainboxworld.dedyn.io" className="hover:text-blue-600">info@brainboxworld.dedyn.io</a>
               </InfoRow>
               <InfoRow icon={Phone} title="Phone">
                 <div>+1 (555) 123-4567</div>
@@ -101,7 +101,7 @@ function ContactPage() {
             <button type="submit" disabled={submitting} className="w-full py-3 rounded-md bg-blue-600 hover:bg-blue-700 text-white font-semibold flex items-center justify-center gap-2 disabled:opacity-60">
               <Send className="w-4 h-4" /> {submitting ? "Sending..." : "Send Message"}
             </button>
-            <a href="https://wa.me/12366134007" target="_blank" rel="noopener noreferrer" className="w-full py-3 rounded-md bg-green-500 hover:bg-green-600 text-white font-semibold flex items-center justify-center gap-2">
+            <a href="https://wa.me/13312782900" target="_blank" rel="noopener noreferrer" className="w-full py-3 rounded-md bg-green-500 hover:bg-green-600 text-white font-semibold flex items-center justify-center gap-2">
               <MessageCircle className="w-4 h-4" /> Contact on WhatsApp
             </a>
           </form>
