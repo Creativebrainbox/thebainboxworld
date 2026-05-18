@@ -47,6 +47,52 @@ const offers = [
   { title: "Web Development", desc: "We provide the best custom website development solutions for you. Our web design services are loved by startup's, businesses and organizations.", img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop" },
 ];
 
+const problems = [
+  { icon: TrendingDown, title: "Traffic Has Plateaued", desc: "You've hit a ceiling and can't figure out what's broken in your growth engine." },
+  { icon: AlertTriangle, title: "Conversions Are Declining", desc: "Visitors are landing on your site but they aren't converting — the funnel is leaking." },
+  { icon: Layers, title: "Fragmented Tech Stack", desc: "Apps, tools, and integrations are duct-taped together with no cohesive system." },
+  { icon: Compass, title: "No Strategic Clarity", desc: "You're making tactical moves without a roadmap, clear priorities, or reliable data." },
+  { icon: BarChart3, title: "Poor Tracking & Visibility", desc: "You can't attribute revenue or measure performance with your current setup." },
+  { icon: Rocket, title: "Scaling Before Foundation", desc: "You're pouring into ads while the site itself underperforms and leaks margin." },
+];
+
+const approach = [
+  "Diagnostic-led methodology",
+  "Conversion-focused execution",
+  "Scalable growth infrastructure",
+  "Data-driven decision making",
+];
+
+const stats = [
+  { value: "250+", label: "Projects Delivered" },
+  { value: "180%", label: "Avg. Traffic Lift" },
+  { value: "$25M+", label: "Revenue Influenced" },
+  { value: "98%", label: "Client Satisfaction" },
+];
+
+const expertise = [
+  { icon: Target, title: "SEO Strategy", desc: "Technical SEO and on-page architecture that turn search visibility into qualified traffic and revenue." },
+  { icon: Sparkles, title: "Brand Experience Design", desc: "Visual identity and UX that communicate value and build emotional connection with your audience." },
+  { icon: LineChart, title: "Growth Systems", desc: "Data-driven frameworks that identify bottlenecks and create compounding growth across channels." },
+  { icon: Search, title: "Content & Organic Growth", desc: "Content architecture and editorial strategies that drive qualified traffic without ad dependency." },
+  { icon: Code2, title: "Custom Development", desc: "Shopify, WordPress, Webflow and custom builds engineered for performance and scale." },
+  { icon: Smartphone, title: "Mobile Optimization", desc: "Mobile-first design and performance work that captures the 70%+ of traffic shopping on phones." },
+];
+
+const testimonials = [
+  { quote: "BrainBoxWorld didn't just optimize our site — they rebuilt our entire growth engine. Organic traffic doubled within 90 days.", author: "Founder, Retrospec" },
+  { quote: "The strategic clarity they brought was unlike any agency we've worked with. Every decision was backed by data.", author: "CEO, Darn Tough" },
+  { quote: "They understood our positioning instantly. The new experience converts like nothing we had before.", author: "Marketing Lead, Trnda" },
+  { quote: "Our revenue tripled after they rebuilt our SEO and product discovery system. The ROI has been extraordinary.", author: "Co-Founder, Benetek" },
+];
+
+const insights = [
+  { tag: "Conversion Optimization", read: "8 min read", title: "Why Your Site Isn't Converting (And the 7 Structural Fixes That Will)", date: "March 2026", slug: "site-not-converting-7-structural-fixes" },
+  { tag: "SEO & AI", read: "10 min read", title: "The AI-Powered SEO Framework for eCommerce Brands in 2026", date: "March 2026", slug: "ai-powered-seo-framework-2026" },
+  { tag: "Technical Strategy", read: "7 min read", title: "Shopify 2.0 vs Custom Build: Which Architecture Scales Better?", date: "February 2026", slug: "shopify-2-vs-custom-build" },
+];
+
+
 function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
     <div className="text-center mb-12">
