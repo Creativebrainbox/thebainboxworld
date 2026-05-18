@@ -47,7 +47,7 @@ function PortfolioPage() {
           ))}
         </div>
         <div className="text-center mt-12">
-          <a href="https://wa.me/12366134007" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-green-500 hover:bg-green-600 text-white font-semibold">
+          <a href="https://wa.me/13312782900" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-green-500 hover:bg-green-600 text-white font-semibold">
             <MessageCircle className="w-5 h-5" /> Contact on WhatsApp
           </a>
         </div>
