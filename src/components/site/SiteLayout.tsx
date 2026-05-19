@@ -3,7 +3,17 @@ import { Mail, Phone, Clock, MapPin, Menu, X, MessageCircle } from "lucide-react
 import { useState } from "react";
 import logo from "@/assets/logo.png";
 
-const navItems = [
+const desktopNavItems = [
+  { label: "About", to: "/about", hash: undefined as string | undefined },
+  { label: "Services", to: "/", hash: "services" },
+  { label: "Portfolio", to: "/portfolio", hash: undefined },
+  { label: "Case Studies", to: "/case-studies", hash: undefined },
+  { label: "Blog", to: "/blog", hash: undefined },
+  { label: "Packages", to: "/packages", hash: undefined },
+  { label: "Contact", to: "/contact", hash: undefined },
+];
+
+const mobileNavItems = [
   { label: "HOME", to: "/", hash: undefined as string | undefined },
   { label: "ABOUT", to: "/about", hash: undefined },
   { label: "SERVICES", to: "/", hash: "services" },
