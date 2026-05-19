@@ -49,10 +49,10 @@ function ContactPage() {
                 <a href="mailto:info@brainboxworld.dedyn.io" className="hover:text-blue-600">info@brainboxworld.dedyn.io</a>
               </InfoRow>
               <InfoRow icon={Phone} title="Phone">
-                <div>+1 (555) 123-4567</div>
-                <div className="text-xs text-slate-500">Mon-Sat 9am to 6pm</div>
+                <a href="https://wa.me/13312782900" className="hover:text-blue-600">+1 (331) 278-2900</a>
+                <div className="text-xs text-slate-500">Available 24/7</div>
               </InfoRow>
-              <InfoRow icon={MapPin} title="Location">Birmingham, UK</InfoRow>
+              <InfoRow icon={MapPin} title="Location">Remote — based in Texas, USA</InfoRow>
             </div>
             <div className="mt-8">
               <h4 className="font-semibold text-slate-800 mb-3">Follow Us</h4>

@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, Phone, Clock, Globe, Menu, X, MessageCircle } from "lucide-react";
+import { Mail, Phone, Clock, MapPin, Menu, X, MessageCircle } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/logo.png";
 
 const navItems = [
   { label: "HOME", to: "/", hash: undefined as string | undefined },
@@ -17,21 +18,23 @@ const navItems = [
 
 function TopBar() {
   return (
-    <div className="bg-slate-900 text-slate-200 text-xs sm:text-sm">
+    <div className="bg-slate-900 text-slate-200 text-xs sm:text-sm animate-fade-in">
       <div className="max-w-7xl mx-auto px-4 py-2.5 flex flex-wrap justify-between items-center gap-2">
-        <a href="https://wa.me/13312782900" className="flex items-center gap-2 hover:text-white">
+        <a href="https://wa.me/13312782900" className="flex items-center gap-2 hover:text-white transition-colors">
           <Phone className="w-4 h-4" /><span>WhatsApp: +1 (331) 278-2900</span>
         </a>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
-          <a href="mailto:info@brainboxworld.dedyn.io" className="flex items-center gap-2 hover:text-white">
+          <a href="mailto:info@brainboxworld.dedyn.io" className="flex items-center gap-2 hover:text-white transition-colors">
             <Mail className="w-4 h-4" /><span>info@brainboxworld.dedyn.io</span>
           </a>
           <span className="flex items-center gap-2">
-            <Clock className="w-4 h-4" /><span>Mon-Sat : 9 AM to 6 PM</span>
+            <MapPin className="w-4 h-4" /><span>Remote — Texas, USA</span>
+          </span>
+          <span className="flex items-center gap-2">
+            <Clock className="w-4 h-4" /><span>Available 24/7</span>
           </span>
         </div>
       </div>
-
     </div>
   );
 }
@@ -41,10 +44,12 @@ function Header() {
   return (
     <header className="bg-white border-b sticky top-0 z-40">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
-            <Globe className="w-6 h-6 text-blue-600" />
-          </div>
+        <Link to="/" className="flex items-center gap-3 group" onClick={() => setOpen(false)}>
+          <img
+            src={logo}
+            alt="BrainBoxWorld logo"
+            className="w-11 h-11 object-contain transition-transform duration-500 group-hover:rotate-[360deg] group-hover:scale-110"
+          />
           <span className="text-lg sm:text-xl font-bold tracking-wide">
             <span className="text-blue-600">BRAIN</span>
             <span className="text-slate-800">BOXWORLD</span>
@@ -56,7 +61,7 @@ function Header() {
               key={item.label}
               to={item.to}
               hash={item.hash}
-              className="text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors"
+              className="text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors story-link"
               activeOptions={{ exact: true, includeHash: false }}
               activeProps={{ className: "text-sm font-semibold text-blue-600" }}
             >
@@ -73,7 +78,7 @@ function Header() {
         </button>
       </div>
       {open && (
-        <nav className="lg:hidden border-t bg-white">
+        <nav className="lg:hidden border-t bg-white animate-fade-in">
           <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1">
             {navItems.map((item) => (
               <Link
@@ -81,7 +86,7 @@ function Header() {
                 to={item.to}
                 hash={item.hash}
                 onClick={() => setOpen(false)}
-                className="text-sm font-semibold text-slate-700 hover:text-blue-600 py-2"
+                className="text-sm font-semibold text-slate-700 hover:text-blue-600 hover:translate-x-1 transition-all py-2"
               >
                 {item.label}
               </Link>
@@ -99,9 +104,7 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-10">
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-full bg-blue-600/20 flex items-center justify-center">
-              <Globe className="w-6 h-6 text-blue-400" />
-            </div>
+            <img src={logo} alt="BrainBoxWorld logo" className="w-11 h-11 object-contain bg-white/5 rounded-full p-1" />
             <span className="text-lg font-bold text-white">
               BRAIN<span className="text-blue-400">BOXWORLD</span>
             </span>
@@ -113,14 +116,14 @@ function Footer() {
         <div>
           <h4 className="text-white font-semibold mb-4">Quick Links</h4>
           <ul className="space-y-2 text-sm">
-            <li><Link to="/" className="hover:text-white">Home</Link></li>
-            <li><Link to="/about" className="hover:text-white">About</Link></li>
-            <li><Link to="/portfolio" className="hover:text-white">Portfolio</Link></li>
-            <li><Link to="/case-studies" className="hover:text-white">Case Studies</Link></li>
-            <li><Link to="/blog" className="hover:text-white">Blog</Link></li>
-            <li><Link to="/packages" className="hover:text-white">Packages</Link></li>
-            <li><Link to="/audit" className="hover:text-white">Free Audit</Link></li>
-            <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
+            <li><Link to="/" className="hover:text-white story-link">Home</Link></li>
+            <li><Link to="/about" className="hover:text-white story-link">About</Link></li>
+            <li><Link to="/portfolio" className="hover:text-white story-link">Portfolio</Link></li>
+            <li><Link to="/case-studies" className="hover:text-white story-link">Case Studies</Link></li>
+            <li><Link to="/blog" className="hover:text-white story-link">Blog</Link></li>
+            <li><Link to="/packages" className="hover:text-white story-link">Packages</Link></li>
+            <li><Link to="/audit" className="hover:text-white story-link">Free Audit</Link></li>
+            <li><Link to="/contact" className="hover:text-white story-link">Contact</Link></li>
           </ul>
         </div>
         <div>
@@ -128,9 +131,9 @@ function Footer() {
           <ul className="space-y-2 text-sm">
             <li className="flex items-center gap-2"><Phone className="w-4 h-4" /><span>+1 (331) 278-2900</span></li>
             <li className="flex items-center gap-2"><Mail className="w-4 h-4" /><span>info@brainboxworld.dedyn.io</span></li>
-            <li className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>Mon-Sat : 9 AM to 6 PM</span></li>
+            <li className="flex items-center gap-2"><MapPin className="w-4 h-4" /><span>Remote — Texas, USA</span></li>
+            <li className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>Available 24/7</span></li>
           </ul>
-
         </div>
       </div>
       <div className="border-t border-slate-800 py-4 text-center text-xs text-slate-400">
@@ -146,7 +149,7 @@ export function WhatsAppFloat() {
       href="https://wa.me/13312782900"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white flex items-center justify-center shadow-lg z-50"
+      className="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white flex items-center justify-center shadow-lg z-50 animate-fade-in hover:scale-110 transition-transform before:absolute before:inset-0 before:rounded-full before:bg-green-400 before:animate-ping before:-z-10"
       aria-label="Contact on WhatsApp"
     >
       <MessageCircle className="w-7 h-7" />
