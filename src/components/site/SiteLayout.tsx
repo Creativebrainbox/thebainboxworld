@@ -3,7 +3,17 @@ import { Mail, Phone, Clock, MapPin, Menu, X, MessageCircle } from "lucide-react
 import { useState } from "react";
 import logo from "@/assets/logo.png";
 
-const navItems = [
+const desktopNavItems = [
+  { label: "About", to: "/about", hash: undefined as string | undefined },
+  { label: "Services", to: "/", hash: "services" },
+  { label: "Portfolio", to: "/portfolio", hash: undefined },
+  { label: "Case Studies", to: "/case-studies", hash: undefined },
+  { label: "Blog", to: "/blog", hash: undefined },
+  { label: "Packages", to: "/packages", hash: undefined },
+  { label: "Contact", to: "/contact", hash: undefined },
+];
+
+const mobileNavItems = [
   { label: "HOME", to: "/", hash: undefined as string | undefined },
   { label: "ABOUT", to: "/about", hash: undefined },
   { label: "SERVICES", to: "/", hash: "services" },
@@ -28,7 +38,7 @@ function TopBar() {
             <Mail className="w-4 h-4" /><span>info@brainboxworld.dedyn.io</span>
           </a>
           <span className="flex items-center gap-2">
-            <MapPin className="w-4 h-4" /><span>Remote — Texas, USA</span>
+            <MapPin className="w-4 h-4" /><span>Remote</span>
           </span>
           <span className="flex items-center gap-2">
             <Clock className="w-4 h-4" /><span>Available 24/7</span>
@@ -55,22 +65,28 @@ function Header() {
             <span className="text-slate-800">BOXWORLD</span>
           </span>
         </Link>
-        <nav className="hidden lg:flex items-center gap-7">
-          {navItems.map((item) => (
+        <nav className="hidden md:flex items-center gap-5 lg:gap-6">
+          {desktopNavItems.map((item) => (
             <Link
               key={item.label}
               to={item.to}
               hash={item.hash}
-              className="text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors story-link"
+              className="text-sm font-medium text-slate-700 hover:text-blue-600 transition-colors story-link"
               activeOptions={{ exact: true, includeHash: false }}
-              activeProps={{ className: "text-sm font-semibold text-blue-600" }}
+              activeProps={{ className: "text-sm font-medium text-blue-600" }}
             >
               {item.label}
             </Link>
           ))}
+          <Link
+            to="/audit"
+            className="ml-1 inline-flex items-center bg-slate-900 hover:bg-blue-600 text-white text-sm font-semibold px-4 py-2.5 rounded-md transition-all hover:scale-105 hover:shadow-lg"
+          >
+            Book an Audit
+          </Link>
         </nav>
         <button
-          className="lg:hidden p-2 text-slate-700"
+          className="md:hidden p-2 text-slate-700 transition-transform hover:scale-110"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
@@ -78,9 +94,9 @@ function Header() {
         </button>
       </div>
       {open && (
-        <nav className="lg:hidden border-t bg-white animate-fade-in">
+        <nav className="md:hidden border-t bg-white animate-fade-in">
           <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1">
-            {navItems.map((item) => (
+            {mobileNavItems.map((item) => (
               <Link
                 key={item.label}
                 to={item.to}
@@ -91,6 +107,13 @@ function Header() {
                 {item.label}
               </Link>
             ))}
+            <Link
+              to="/audit"
+              onClick={() => setOpen(false)}
+              className="mt-2 inline-flex justify-center bg-slate-900 hover:bg-blue-600 text-white text-sm font-semibold px-4 py-2.5 rounded-md transition-colors"
+            >
+              Book an Audit
+            </Link>
           </div>
         </nav>
       )}
@@ -131,7 +154,7 @@ function Footer() {
           <ul className="space-y-2 text-sm">
             <li className="flex items-center gap-2"><Phone className="w-4 h-4" /><span>+1 (331) 278-2900</span></li>
             <li className="flex items-center gap-2"><Mail className="w-4 h-4" /><span>info@brainboxworld.dedyn.io</span></li>
-            <li className="flex items-center gap-2"><MapPin className="w-4 h-4" /><span>Remote — Texas, USA</span></li>
+            <li className="flex items-center gap-2"><MapPin className="w-4 h-4" /><span>Remote</span></li>
             <li className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>Available 24/7</span></li>
           </ul>
         </div>
