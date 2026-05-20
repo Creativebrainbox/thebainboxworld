@@ -56,13 +56,8 @@ function ContactPage() {
             </div>
             <div className="mt-8">
               <h4 className="font-semibold text-slate-800 mb-3">Follow Us</h4>
-              <div className="flex gap-3">
-                {[Facebook, Twitter, Instagram].map((Icon, i) => (
-                  <a key={i} href="#" className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:text-blue-600 hover:border-blue-200">
-                    <Icon className="w-5 h-5" />
-                  </a>
-                ))}
-              </div>
+              <SocialLinks />
+            </div>
             </div>
           </div>
 
