@@ -27,10 +27,24 @@ const includes = [
 
 function AuditPage() {
   const [form, setForm] = useState({ name: "", email: "", website: "", goals: "" });
-  const onSubmit = (e: React.FormEvent) => {
+  const [submitting, setSubmitting] = useState(false);
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Audit request received! We'll be in touch within 24 hours.");
-    setForm({ name: "", email: "", website: "", goals: "" });
+    setSubmitting(true);
+    try {
+      const res = await fetch('/api/public/audit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error('Failed');
+      toast.success("Audit request received! We'll be in touch within 24 hours.");
+      setForm({ name: "", email: "", website: "", goals: "" });
+    } catch {
+      toast.error("Something went wrong. Please try again or WhatsApp us.");
+    } finally {
+      setSubmitting(false);
+    }
   };
   return (
     <SiteLayout>
