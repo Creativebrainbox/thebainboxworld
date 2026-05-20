@@ -200,6 +200,10 @@ function Footer() {
             <li className="flex items-center gap-2"><MapPin className="w-4 h-4" /><span>Remote</span></li>
             <li className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>Available 24/7</span></li>
           </ul>
+          <div className="mt-5">
+            <h4 className="text-white font-semibold mb-3">Follow Us</h4>
+            <SocialLinks variant="footer" />
+          </div>
         </div>
       </div>
       <div className="border-t border-slate-800 py-4 text-center text-xs text-slate-400">
@@ -224,6 +228,7 @@ export function WhatsAppFloat() {
 }
 
 export function SiteLayout({ children }: { children: React.ReactNode }) {
+  useScrollReveal();
   return (
     <div className="min-h-screen flex flex-col bg-white text-slate-900">
       <TopBar />
@@ -237,10 +242,14 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
 
 export function PageHero({ title, subtitle }: { title: string; subtitle?: string }) {
   return (
-    <section className="bg-slate-800 text-white py-20 px-4">
-      <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">{title}</h1>
-        {subtitle && <p className="text-lg text-slate-300">{subtitle}</p>}
+    <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 text-white py-20 px-4 overflow-hidden">
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-0 -left-10 w-72 h-72 bg-blue-500/30 rounded-full blur-3xl animate-blob" />
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-blob delay-300" />
+      </div>
+      <div className="relative max-w-4xl mx-auto text-center">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-slide-up">{title}</h1>
+        {subtitle && <p className="text-lg text-slate-300 animate-slide-up delay-200">{subtitle}</p>}
       </div>
     </section>
   );
