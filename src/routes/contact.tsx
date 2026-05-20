@@ -58,8 +58,8 @@ function ContactPage() {
               <h4 className="font-semibold text-slate-800 mb-3">Follow Us</h4>
               <SocialLinks />
             </div>
-            </div>
           </div>
+
 
           {/* Form */}
           <form onSubmit={onSubmit} className="bg-white rounded-xl border border-slate-200 p-6 md:p-8 space-y-4 shadow-sm">
