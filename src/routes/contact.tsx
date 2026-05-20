@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHero } from "@/components/site/SiteLayout";
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Send, MessageCircle } from "lucide-react";
+import { SiteLayout, PageHero, SocialLinks } from "@/components/site/SiteLayout";
+import { Mail, Phone, MapPin, Send, MessageCircle } from "lucide-react";
 import { useState, type FormEvent } from "react";
 import { toast } from "sonner";
 
