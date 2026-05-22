@@ -282,7 +282,8 @@ export function LiveChatWidget() {
       <button
         onClick={() => setOpen((v) => !v)}
         aria-label="Chat with me on WhatsApp"
-        className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 inline-flex items-center gap-2 pl-4 pr-5 py-3 rounded-full btn-premium shadow-2xl animate-pulse-glow group"
+        style={{ width: "auto", maxWidth: "calc(100vw - 1.5rem)" }}
+        className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-[60] w-auto inline-flex items-center gap-2 pl-3 pr-4 py-2.5 rounded-full btn-premium shadow-2xl animate-pulse-glow group"
       >
         <span className="absolute -top-1 -right-1 flex h-3 w-3">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
@@ -293,7 +294,7 @@ export function LiveChatWidget() {
         ) : (
           <MessageCircle className="w-5 h-5 text-white transition-transform group-hover:scale-110" />
         )}
-        {!open && <span className="text-sm font-semibold text-white whitespace-nowrap">Chat with me</span>}
+        {!open && <span className="text-sm font-semibold text-white whitespace-nowrap">Chat</span>}
       </button>
 
       {/* Panel */}
