@@ -159,7 +159,7 @@ function Header() {
 
       {open && (
         <nav className="lg:hidden border-t border-white/10 glass-strong animate-fade-in">
-          <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
+          <div className="w-full px-3 md:px-6 py-4 flex flex-col gap-1">
             {mobileNavItems.map((item) => (
               <Link
                 key={item.label}
