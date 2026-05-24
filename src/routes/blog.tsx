@@ -85,6 +85,7 @@ function BlogPage() {
               </div>
             </article>
           ))}
+          </div>
         </div>
       </section>
     </SiteLayout>
