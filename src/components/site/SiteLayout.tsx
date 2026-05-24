@@ -282,19 +282,18 @@ export function LiveChatWidget() {
       <button
         onClick={() => setOpen((v) => !v)}
         aria-label="Chat with me on WhatsApp"
-        style={{ width: "auto", maxWidth: "calc(100vw - 1.5rem)" }}
-        className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-[60] w-auto inline-flex items-center gap-2 pl-3 pr-4 py-2.5 rounded-full btn-premium shadow-2xl animate-pulse-glow group"
+        className="fixed bottom-5 right-5 md:bottom-7 md:right-7 z-[9999] w-14 h-14 md:w-16 md:h-16 inline-flex items-center justify-center rounded-full shadow-2xl animate-pulse-glow group ring-4 ring-emerald-400/30"
+        style={{ background: "linear-gradient(135deg, #25D366 0%, #128C7E 100%)" }}
       >
-        <span className="absolute -top-1 -right-1 flex h-3 w-3">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-          <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500" />
+        <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75" />
+          <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 border-2 border-white" />
         </span>
         {open ? (
-          <X className="w-5 h-5 text-white" />
+          <X className="w-6 h-6 text-white" />
         ) : (
-          <MessageCircle className="w-5 h-5 text-white transition-transform group-hover:scale-110" />
+          <MessageCircle className="w-7 h-7 text-white transition-transform group-hover:scale-110" fill="white" />
         )}
-        {!open && <span className="text-sm font-semibold text-white whitespace-nowrap">Chat</span>}
       </button>
 
       {/* Panel */}
