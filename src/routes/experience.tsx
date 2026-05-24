@@ -105,7 +105,7 @@ function ExperiencePage() {
               <active.icon className="w-6 h-6 text-blue-600" />
             </div>
             <div>
-              <h3 className="font-bold text-slate-800 text-lg">{active.title}</h3>
+              <h2 className="font-bold text-slate-800 text-lg">{active.title}</h2>
               <p className="text-sm text-slate-600">{active.desc}</p>
             </div>
           </div>
