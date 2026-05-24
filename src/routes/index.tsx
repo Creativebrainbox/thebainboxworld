@@ -415,7 +415,7 @@ function HomePage() {
               <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer"
                 className="group grad-border overflow-hidden hover-lift reveal" style={{ transitionDelay: `${i * 60}ms` }}>
                 <div className="relative h-56 overflow-hidden">
-                  <img src={p.img} alt={p.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1200ms]" />
+                  <img src={p.img} alt={`${p.name} website showcase`} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1200ms]" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a1a] via-[#0a0a1a]/30 to-transparent" />
                   <div className="absolute top-3 left-3 text-[10px] tracking-widest uppercase px-2 py-1 rounded-md glass text-indigo-200">{p.cat}</div>
                 </div>
